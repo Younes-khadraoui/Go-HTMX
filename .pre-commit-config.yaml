@@ -1,0 +1,13 @@
+repos:
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v3.2.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+        args: []
+  - repo: local
+    hooks:
+      - id: prettier
+        name: Run prettier
+        entry: npx prettier . --write
+        language: system

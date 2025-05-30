@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "tailwindcss": "^4.1.8"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "prettier-plugin-go-template": "^0.0.15"
+  }
+}

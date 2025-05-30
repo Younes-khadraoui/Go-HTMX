@@ -1,0 +1,29 @@
+{{ define "content" }}
+  <h1 class="text-2xl font-bold  mb-6">Welcome to the app starter</h1>
+
+  <!-- Alpine.js Button: Toggle visibility -->
+  <div x-data="{ show: false }" class="mb-8">
+    <button
+      @click="show = !show"
+      class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+    >
+      Toggle Message (Alpine.js)
+    </button>
+    <p x-show="show" class="mt-2 text-green-600">Hello from Alpine.js!</p>
+  </div>
+
+  <!-- HTMX Button: Fetch server response -->
+  <div>
+    <button
+      hx-get="/hello"
+      hx-target="#htmx-result"
+      hx-swap="innerHTML"
+      class="px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-600"
+    >
+      Load Message (HTMX)
+    </button>
+    <div id="htmx-result" class="mt-2 text-purple-700"></div>
+  </div>
+{{ end }}
+
+{{ define "welcome" }}{{ template "base" . }}{{ end }}

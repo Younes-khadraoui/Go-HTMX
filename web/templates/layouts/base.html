@@ -1,0 +1,25 @@
+{{ define "base" }}
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0,maximum-scale=1, viewport-fit=cover"
+      />
+      <meta name="description" content="{{ .PageDescription }}" />
+      <title>{{ .title }}</title>
+      <link href="/static/css/output.css" rel="stylesheet" />
+      <!-- Alpine.js -->
+      <script
+        defer
+        src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+      ></script>
+      <!-- HTMX -->
+      <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    </head>
+    <body class="p-8 max-w-2xl mx-auto bg-white">
+      {{ template "content" . }}
+    </body>
+  </html>
+{{ end }}
